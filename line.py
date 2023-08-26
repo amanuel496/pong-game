@@ -23,3 +23,9 @@ class Line(Turtle):
             new_line.penup()
             new_line.goto(position)
             self.lines.append(new_line)
+
+    def call_hiding_function(self):
+        # for line in self.lines:
+        #     line.hideturtle()
+        self.clear()
+

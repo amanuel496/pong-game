@@ -9,8 +9,9 @@ LOWER_LIMIT = -241
 
 class Paddle(Turtle):
 
-    def __init__(self, x_point, y_point):
+    def __init__(self, x_point, y_point, name):
         super().__init__()
+        self.name = name
         self.x_point = x_point
         self.y_point = y_point
         self.stick = Turtle()
@@ -36,3 +37,6 @@ class Paddle(Turtle):
         if self.stick.ycor() > LOWER_LIMIT:
             self.stick.setheading(DOWN)
             self.stick.forward(MOVE_DISTANCE)
+
+    def get_position(self):
+        return self.stick.position()
